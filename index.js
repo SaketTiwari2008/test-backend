@@ -3,6 +3,15 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
+// ✅ Add CSP before routes
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "connect-src 'self' https://test-backend-qicl.onrender.com"
+  );
+  next();
+});
+
 const port = process.env.PORT;
 
 app.get("/", (req, res) => {
