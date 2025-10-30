@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   next();
 });
 
-const port = process.env.PORT | 8080;
+const port = process.env.PORT;
 
 app.get("/", (req, res) => {
   res.send("<h1>Home</h1>");
