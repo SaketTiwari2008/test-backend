@@ -66,7 +66,7 @@ app.get("/api/v1/dog", (req, res) => {
 });
 
 app.get("/api/v1/jock", (req, res) => {
-  res.send("<h1>Your welcome and go back <just kidding 😂/h1>");
+  res.send("<h1>Your welcome and go back just kidding 😂</h1>");
 })
 
 app.listen(port, () => {
